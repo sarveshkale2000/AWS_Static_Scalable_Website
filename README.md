@@ -5,7 +5,7 @@
 This project demonstrates how to host a static website on AWS with high availability and scalability. It utilizes multiple AWS services to ensure the website can handle traffic variations and remain available even in the event of failures. The setup includes EC2 instances for hosting the website, an Application Load Balancer (ALB) for distributing traffic, an Auto Scaling Group (ASG) for scaling instances, and Route 53 for domain name management.
 
 ## Working Architecture
-![Architecture Diagram](Working_Architecture.png) 
+![Architecture Diagram](Working_Architecture_Diagram.png) 
 
 ## AWS Services Used
 * **EC2 Instances**: Virtual servers to host your website.
