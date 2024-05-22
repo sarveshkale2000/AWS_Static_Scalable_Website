@@ -5,9 +5,7 @@
 This project demonstrates how to host a static website on AWS with high availability and scalability. It utilizes multiple AWS services to ensure the website can handle traffic variations and remain available even in the event of failures. The setup includes EC2 instances for hosting the website, an Application Load Balancer (ALB) for distributing traffic, an Auto Scaling Group (ASG) for scaling instances, and Route 53 for domain name management.
 
 ## Working Architecture
-![Architecture Diagram](aws-project-1
-/Working Architecture.png
-) 
+![Architecture Diagram](aws-project-1/Working Architecture.png) <!-- Replace with the path to your diagram -->
 
 ## AWS Services Used
 * **EC2 Instances**: Virtual servers to host your website.
@@ -41,7 +39,7 @@ EC2 (Elastic Compute Cloud) instances are virtual servers in AWS that host your 
     ```
 
 4. **Deploy Your Static Website**:
-     Create a temporary directory and download your website content:
+    - Create a temporary directory and download your website content:
       ```bash
       mkdir temp
       cd temp
@@ -49,7 +47,7 @@ EC2 (Elastic Compute Cloud) instances are virtual servers in AWS that host your 
       unzip <zip-file-name> # Replace with the actual file name
       cd <unzipped-folder>  # Replace with the actual folder name
       ```
-     Move content to the Apache default root directory:
+    - Move content to the Apache default root directory:
       ```bash
       sudo mv * /var/www/html/
       ```
@@ -77,35 +75,4 @@ An ALB distributes incoming traffic across multiple EC2 instances to ensure high
 
 ### 3. Auto Scaling Group (ASG)
 
-An ASG automatically adjusts the number of EC2 instances in response to traffic patterns, ensuring the application can handle varying loads efficiently.
-
-**Steps**:
-1. **Create an Auto Scaling Group**:
-    - Use the AMI created from your EC2 instance.
-    - Select the VPC and Availability Zones.
-    - Attach the ASG to the ALB.
-
-2. **Configure Scaling Policies**:
-    - Define policies to scale in and out based on metrics like CPU utilization.
-
-### 4. Route 53
-
-Route 53 is a scalable DNS and domain name management service that translates your domain name to the ALB's DNS name, making your website accessible.
-
-**Steps**:
-1. **Create a Hosted Zone**:
-    - Enter the domain name you purchased from GoDaddy.
-    - Choose a public hosted zone.
-
-2. **Create Records**:
-    - **ALIAS Record**: Point the root domain to your ALB.
-    - **CNAME Record**: Point a subdomain (e.g., www) to your ALB's DNS name.
-
-3. **Update GoDaddy DNS Settings**:
-    - Go to GoDaddy and update your domain's nameservers with those provided by Route 53.
-
-4. **Verify DNS Propagation**:
-    - Use tools like `dig` & `nslookup` or online DNS checkers to ensure `sarvesh.life` resolves to your ALB.
-
-### Summary
-Following these steps, you will have a highly available and scalable static website hosted on AWS, utilizing EC2 instances, an Application Load Balancer, Auto Scaling Group, and Route 53 for DNS management.
+An ASG automatically adjusts the number of EC2 instances in response to traffic patterns, ensuring the application can handle varying loads efficiently
