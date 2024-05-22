@@ -39,7 +39,7 @@ EC2 (Elastic Compute Cloud) instances are virtual servers in AWS that host your 
     ```
 
 4. **Deploy Your Static Website**:
-    - Create a temporary directory and download your website content:
+     Create a temporary directory and download your website content:
       ```bash
       mkdir temp
       cd temp
@@ -47,7 +47,7 @@ EC2 (Elastic Compute Cloud) instances are virtual servers in AWS that host your 
       unzip <zip-file-name> # Replace with the actual file name
       cd <unzipped-folder>  # Replace with the actual folder name
       ```
-    - Move content to the Apache default root directory:
+     Move content to the Apache default root directory:
       ```bash
       sudo mv * /var/www/html/
       ```
