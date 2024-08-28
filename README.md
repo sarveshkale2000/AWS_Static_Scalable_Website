@@ -1,4 +1,4 @@
-# Static Website with High Availability & Scalability on AWS
+# Static Website with High Availability & Scalability on AW
 
 ## Overview
 
